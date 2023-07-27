@@ -3,6 +3,7 @@ students = {
     "Harry": "Gryffindor",
     "Ron": "Gryffindor",
     "Draco": "Slytherin",
+    "_": "Unaasigned"
 }
 # print(students["Hermoine"])
 # print(students["Harry"])
