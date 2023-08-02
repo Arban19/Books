@@ -33,9 +33,9 @@ while True:
     print("Enter your move: (r)ock, (p)aper, s(c)issor, (l)izard, (s)pock or (q)uit.\n")
     player_move = input().lower()
     if player_move == "q":
-        sys.exit()
         print("Final Score: Wins, Losses, Ties", (wins, losses, ties))
-        print("Thank you. Bye-Bye")
+        print("Thank you. Goodbye")
+        sys.exit()
     if player_move == "r":
         print("Rock versus...")
     elif player_move == "p":
