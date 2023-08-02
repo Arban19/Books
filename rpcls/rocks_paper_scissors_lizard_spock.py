@@ -1,17 +1,34 @@
 import random, sys
 
-print("Hello, welcome to my Rock, Paper, Scissor, Lizard, Spock game.\n")
-response = input("If haven't seen TBBT and are unfamiliar with the rules, type n. Else hit any other key to proceed. \n").lower()
+print("Hello, Welcome to my Rock, Paper, Scissor, Lizard, Spock game.\n")
+response = input("If haven't seen TBBT and are unfamiliar with the rules, type n. Else hit y to proceed. \n").lower()
 if response == "n":
     print(" The rules are as follows:\n Scissors cuts Paper\n Paper covers Rock\n Rock crushes Lizard\n Lizard poisons Spock\n Spock smashes Scissors\n Scissors decapitates Lizard\n Lizard eats Paper\n Paper disproves Spock\n Spock vaporizes Rock\n Rock crushes Scissors\n")
     print(" In simpler terms:\n Scissors > Paper\n Paper > Rock\n Rock > Lizard\n Lizard > Spock\n Spock > Scissors\n Scissors > Lizard\n Lizard > Paper\n Paper > Spock\n Spock > Rock\n Rock > Scissors\n ")
+elif response != "y":
+    exit()
 
 wins = 0
 losses = 0
 ties = 0
+win_message = "You win this round!"
+lose_message = "You lose this round!"
+draw_message = "Damn, inspite of all these complex rules, we still somehow managed to tie the game!!"
+
+def win_scenario(player_move,computer_move):
+    return ((player_move == "c" and computer_move == "p") or # important lesson
+        (player_move == "p" and computer_move == "r") or
+        (player_move == "r" and computer_move == "l") or
+        (player_move == "l" and computer_move == "s") or
+        (player_move == "s" and computer_move == "c") or
+        (player_move == "c" and computer_move == "l") or
+        (player_move == "l" and computer_move == "p") or
+        (player_move == "p" and computer_move == "s") or
+        (player_move == "s" and computer_move == "r") or
+        (player_move == "r" and computer_move == "c"))
 
 while True:
-    print("Hit q or any other key other than the assigned keys at anytime to exit the game.\n")
+    print("Hit q anytime to exit the game.\n")
     print("Score after Current Round: Wins, Losses, Ties\n", (wins, losses, ties))
     print("Enter your move: (r)ock, (p)aper, s(c)issor, (l)izard, (s)pock or (q)uit.\n")
     player_move = input().lower()
@@ -30,7 +47,7 @@ while True:
     elif player_move == "s":
         print("Spock versus...")
     else:
-        sys.exit()
+        continue
 
     random_number = random.randint(1,5)
     if random_number == 1:
@@ -49,42 +66,13 @@ while True:
         computer_move = "s"
         print("Spock")
 
-    win_message = "You win this round!"
-    lose_message = "You lose this round!"
-    draw_message = "Damn, inspite of all these complex rules, we still somehow managed to tie the game!!"
+
     if player_move == computer_move:
         print(draw_message)
         ties += 1
-    elif player_move == "c" and computer_move == "p":
+    elif win_scenario(player_move,computer_move):
         print(win_message)
-        wins += 1
-    elif player_move == "p" and computer_move == "r":
-        print(win_message)
-        wins += 1
-    elif player_move == "r" and computer_move == "l":
-        print(win_message)
-        wins += 1
-    elif player_move == "l" and computer_move == "s":
-        print(win_message)
-        wins += 1
-    elif player_move == "s" and computer_move == "c":
-        print(win_message)
-        wins += 1
-    elif player_move == "c" and computer_move == "l":
-        print(win_message)
-        wins += 1
-    elif player_move == "l" and computer_move == "p":
-        print(win_message)
-        wins += 1
-    elif player_move == "p" and computer_move == "s":
-        print(win_message)
-        wins += 1
-    elif player_move == "s" and computer_move == "r":
-        print(win_message)
-        wins += 1
-    elif player_move == "r" and computer_move == "c":
-        print(win_message)
-        wins += 1
+        wins +=1
     else:
         print(lose_message)
-        losses +=1
+        losses += 1
