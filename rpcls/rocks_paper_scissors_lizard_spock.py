@@ -30,6 +30,7 @@ def win_scenario(player_move,computer_move):
 while True:
     print("Hit q anytime to exit the game.\n")
     print("Score after Current Round: Wins, Losses, Ties\n", (wins, losses, ties))
+
     print("Enter your move: (r)ock, (p)aper, s(c)issor, (l)izard, (s)pock or (q)uit.\n")
     player_move = input().lower()
     if player_move == "q":
@@ -65,7 +66,6 @@ while True:
     elif random_number == 5:
         computer_move = "s"
         print("Spock")
-
 
     if player_move == computer_move:
         print(draw_message)
