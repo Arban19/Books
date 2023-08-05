@@ -5,10 +5,10 @@ students = {
     "Draco": "Slytherin",
     "_": "Unaasigned"
 }
- print(students["Hermoine"])
- print(students["Harry"])
- print(students["Ron"])
- print(students["Draco"])
+print(students["Hermoine"])
+print(students["Harry"])
+print(students["Ron"])
+print(students["Draco"])
 
 
 for student in students:
