@@ -13,10 +13,10 @@ losses = 0
 ties = 0
 win_message = "You win this round!"
 lose_message = "You lose this round!"
-draw_message = "Damn, inspite of all these complex rules, we still somehow managed to tie the game!!"
+draw_message = "Damn, despite all these complex rules, we still somehow managed to tie the game!!"
 
 def win_scenario(player_move,computer_move):
-    return ((player_move == "c" and computer_move == "p") or # important lesson
+    return ((player_move == "c" and computer_move == "p") or
         (player_move == "p" and computer_move == "r") or
         (player_move == "r" and computer_move == "l") or
         (player_move == "l" and computer_move == "s") or
