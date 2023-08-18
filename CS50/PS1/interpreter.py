@@ -14,9 +14,6 @@ def interpreter(numbers):
             return "Invalid input"
         else:
             return round(float(x / z), 1)
-    
+
 numbers = input("Expression: ")
 print((interpreter(numbers)))
-
-
-    
