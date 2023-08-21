@@ -1,7 +1,6 @@
 import random
 
-print("What is your question, dear child?")
-input()
+print("Hello, I'm your psychic. I will resolve your problem, I have the answer to what's bothering you.")
 def getAnswer(answerNumber):
     if answerNumber == 1:
         return "It is certainly so"
