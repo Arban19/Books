@@ -5,5 +5,4 @@ while True:
     response = input()
     if response == "exit":
         sys.exit()
-    print("You typed "+ response + ".")
-
+    print(f"you entered {response}.")
