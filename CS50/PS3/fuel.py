@@ -1,17 +1,16 @@
-import math
-
 def fuel():
     while True:
-        number = input("Fraction: ")
-        z = number.split("/")
-        numerator = int(z[0])
-        denominator = int(z[1])
         try:
+            number = input("Fraction: ")
+            z = number.split("/")
+            numerator = int(z[0])
+            denominator = int(z[1])
+
             if numerator > denominator:
                 raise ValueError
 
-            answer = math.ceil((numerator/denominator)*100)
-            return answer
+            answer = (numerator/denominator)*100
+            return round(answer)
             break
         except (ValueError, IndexError, ZeroDivisionError) as error:
             continue
