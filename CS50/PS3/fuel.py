@@ -16,9 +16,7 @@ def fuel():
             continue
 
 def response(answer):
-    if answer is None:
-        return "Invalid Input"
-    elif answer >= 99:
+    if answer >= 99:
         return "F"
     elif answer <= 1:
         return "E"
