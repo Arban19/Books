@@ -1,7 +1,8 @@
 def interpreter(numbers):
-    x = int(numbers.split()[0])
-    y = numbers.split()[1]
-    z = int(numbers.split()[2])
+    k = numbers.split()
+    x = int(k[0])
+    y = k[1]
+    z = int(k[2])
 
     if y == "+":
         return round(float(x + z), 1)
