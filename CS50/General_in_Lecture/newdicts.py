@@ -21,6 +21,7 @@ capitals.pop("China")
 capitals.popitem()
 capitals.clear()
 
+
 keys = capitals.keys()
 for key in capitals.keys():
   print(key)
