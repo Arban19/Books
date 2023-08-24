@@ -1,4 +1,4 @@
-def fuel():
+def fuel_gauge():
     while True:
         try:
             number = input("Fraction: ")
@@ -21,5 +21,5 @@ def response(answer):
     else:
         return str(answer) + "%"
 
-result = fuel()
+result = fuel_gauge()
 print(response(result))
