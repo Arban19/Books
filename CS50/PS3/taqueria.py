@@ -11,7 +11,6 @@ rate_chart = {
 }
 
 def main():
-    order = []
     order_cost = 0.0
     try:
         while True:
