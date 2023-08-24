@@ -14,15 +14,12 @@ months = [
 ]
 
 while True:
-        date = input("Date: ")
+        date = input("Date: ").strip()
         if "/" in date:
             month, day, year = date.split("/")
-            day = int(day)
-            month = int(month)
         elif "," in date:
             date = date.replace(",","")
             month, day, year = date.split(" ")
-            day = int(day)
             if month in months:
                 month = months.index(month) + 1
         try:
