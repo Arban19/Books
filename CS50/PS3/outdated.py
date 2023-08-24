@@ -11,14 +11,11 @@ while True:
                 month, day, year = date.split("/")
             else:
                 date = date.replace(",","")
-                parts = date.split(" ")
-                month, day, year = parts
-                if len(parts) != 3:
-                    raise ValueError
+                month, day, year = date.split(" ")
                 if month in months:
                     month = months.index(month) + 1
 
-            if int(month) > 12 or int(day) > 31:
+            if int(month) > 12 or not (1 <= int(day) <= 31):
                 raise ValueError
             else:
                 break
