@@ -5,10 +5,8 @@ def fuel():
             z = number.split("/")
             numerator = int(z[0])
             denominator = int(z[1])
-
             if numerator > denominator:
                 raise ValueError
-
             answer = (numerator/denominator)*100
             return round(answer)
             break
