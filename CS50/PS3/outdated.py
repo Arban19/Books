@@ -14,17 +14,17 @@ months = [
 ]
 
 while True:
-    date = input("Date: ")
-    if "/" in date:
-        month, day, year = date.split("/")
-    elif "," in date:
-        date = date.replace(",","")
-        month, day, year = date.split(" ")
-        if month in months:
-            month = months.index(month) + 1
     try:
+        date = input("Date: ")
+        if "/" in date:
+            month, day, year = date.split("/")
+        elif "," in date:
+            date = date.replace(",","")
+            month, day, year = date.split(" ")
+            if month in months:
+                month = months.index(month) + 1
         if int(month) > 12 and int(date) > 31:
-            continue
+            raise ValueError
         else:
             break
     except (ValueError, AttributeError, NameError, KeyError):
