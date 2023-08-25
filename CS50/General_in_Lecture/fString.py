@@ -6,7 +6,7 @@ print(f"{z:,}")
 
 text = "Arban"
 
-print(f"{text}")
-print(f"{text:#<20}")
-print(f"{text:_>20}")
-print(f"{text:$^20}")
+print(f"{text:}")
+print(f"{text:#<6}")
+print(f"{text:_>6}")
+print(f"{text:@^7}")
