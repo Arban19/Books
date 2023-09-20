@@ -7,8 +7,6 @@ def main():
 
 print(main())
 
-
-
 from decimal import Decimal
 
 def wholesale_cost(args):
