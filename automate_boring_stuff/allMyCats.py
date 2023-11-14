@@ -6,7 +6,7 @@ while True:
     if name == "":
         break
 
-    cat_names = cat_names + [name]
+    cat_names += [name]
 
 print("The cat names are: ")
 for name in cat_names:
