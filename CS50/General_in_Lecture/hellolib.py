@@ -6,6 +6,6 @@ def goodbye(name):
 
 def main(Myname):
     hello(Myname)
-    goodbye(name="657")
+    goodbye(name="Arban")
 
 main("Arban")
