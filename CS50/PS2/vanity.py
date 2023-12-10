@@ -1,37 +1,30 @@
-def is_valid(plate):
-    return min_length(plate) and max_length(plate) and letter_start(plate) and number_end(plate) and not_zero(plate) and no_puncs(plate)
-
-def min_length(plate):
-    return len(plate) >= 2
-
-def max_length(plate):
-    return len(plate) < 6
-
-def letter_start(plate):
-    return plate[:2].isalpha()
-
-def number_end(plate):
-    return plate[-3:].isdigit()
-
-def not_zero(plate):
-    return plate[1] != "0"
-
-def no_puncs(plate):
-    return plate.isalnum()
-
 def main():
-    plate = input("Plate: ")
-    if is_valid(plate):
+    s = input("Plate: ").upper()
+    if is_valid(s):
         print("Valid")
     else:
         print("Invalid")
 
-main()
+def not_zero(s):
+    i = 0
+    while i < len(s):
+        if s[i].isdigit():
+            if s[i] == "0":
+                return False
+            else:
+                break
+        i += 1
+    return True
+
+def does_not_end_with_str(s):
+    if len(s) > 2:
+        return not s[-1].isalpha()
+    else:
+        return True
+
+def is_valid(s):
+    return (2 <= len(s) <= 6) and s[:2].isalpha() and not_zero(s) and s.isalnum() and does_not_end_with_str(s)
 
 
-
-
-
-
-
-
+if __name__ == "__main__":
+    main()
