@@ -1,6 +1,6 @@
 import pytest
 
-from fuel import convert, gauge
+from refueling import convert, gauge
 
 def main():
     test_correct_input()
