@@ -11,7 +11,7 @@ def main():
         for line in lines:
             if not check_if_comment_or_blank(line):
                 no_of_lines += 1
-        return no_of_lines
+        print(no_of_lines)
 
 def check_command_line_argument():
     if len(sys.argv) < 2:
@@ -20,8 +20,7 @@ def check_command_line_argument():
         sys.exit("Too many command-line arguments")
     if ".py" not in sys.argv[1]:
         sys.exit("Not a python file")
-    else:
-        return True
+    return True
 
 def check_if_comment_or_blank(line):
     if line.isspace() or line.lstrip().startswith("#"):
